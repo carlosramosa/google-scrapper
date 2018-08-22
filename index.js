@@ -35,7 +35,7 @@ const parse = (body) =>{
         });
     });
 
-    console.log(JSON.stringify(polla,  null, 4));
+    console.log(JSON.stringify(polla,  null,  4));
 
     // fs.writeFile('pene.xml',body, function (err) {
     //   if (err) throw err;
