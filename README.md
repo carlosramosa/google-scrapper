@@ -1,4 +1,4 @@
-# google-scrapper
+# google-search-scraper
 
 This module translates anything you want to the odor language:
 ```js
