@@ -1,6 +1,6 @@
 # google-search-scraper
 
-This module translates anything you want to the odor language:
+This module search whetever you want on internet with google search engine help
 ```js
 searchBanana();
 { text:
