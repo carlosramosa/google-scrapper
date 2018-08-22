@@ -1,13 +1,22 @@
 'use strict';
 
 const decode = require('decode-uri-component');
+const utf8 = require("utf8")
 
+/**
+ * FUNCTION TO DELETE EMPTY ITEMS
+ */
 const cleanner = ( results ) =>
     results.filter (( { text } ) => text !== '');
 
+
+
+/**
+ * FUNCTIONS TO FORMAT URL FOR EACH RESULT
+ */
 const hrefRegex = /href="\/url\?[^"]+"/gm;
 
-const matchUrl = elem =>
+const matchHref = elem =>
     elem.match(hrefRegex) || [];
 
 const formatUrl = url => 
@@ -22,10 +31,32 @@ const existElement = ( arr ) =>
 
 const getUrl = elem =>
     existElement ( elem )
-        ? formatUrl(matchUrl(elem)[0] || '' )
+        ? formatUrl(matchHref(elem)[0] || '' )
         : ''
     ;
 
+
+
+/**
+ * FUNCTIONS TO FORMAT RESPONSE TEXT
+ */
+const urisRegex = /http[s]?:\/\/[^\s]+/gm;
+
+const deleteUri = ( text ) =>
+    text.replace(urisRegex, '');
+
+const deleteLineSymbols = ( text ) =>
+    text.replace(/(\r\n\t|\n|\r\t)/gm,'');
+
+
+const getText = ( text ) => 
+    deleteLineSymbols ( deleteUri ( text ));
+
+
+
+/**
+ * FUNCTIONS TO FORMAT URL TO MAKE REQUEST
+ */
 const format = ( query ) =>
     query.replace(/ /g, '+');
 
@@ -38,5 +69,6 @@ const makeUri = ( query ) =>
 module.exports = {
     makeUri
     , getUrl
+    , getText
     , cleanner
 }
