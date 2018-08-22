@@ -35,7 +35,7 @@ const parse = (body) =>{
         });
     });
 
-    console.log(JSON.stringify(polla, null, 4));
+    console.log(JSON.stringify(polla,  null, 4));
 
     // fs.writeFile('pene.xml',body, function (err) {
     //   if (err) throw err;
@@ -45,7 +45,7 @@ const parse = (body) =>{
     const ini = body.indexOf('id="ires">');
     const fin = body.indexOf('id="bfoot">');
     const div = body.substring(ini, fin);
-    console.log(div);
+    // console.log(div);
 
 };
 
@@ -58,7 +58,7 @@ const requestGoogle = async() => {
     
     const list = parse(body);
 
-    console.log(list);
+    // console.log(list);
 
 };
 
