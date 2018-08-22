@@ -1,6 +1,6 @@
 {
   "name": "google-scrapper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An awesome module to scrap any google search pages",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,10 @@
   },
   "keywords": [
     "google",
-    "scrapper",
+    "scraper",
     "scrap",
+    "search",
+    "google search",
     "google-scrap"
   ],
   "author": "ramosar",
@@ -21,5 +23,9 @@
     "decode-uri-component": "^0.2.0",
     "request": "^2.87.0",
     "request-promise": "^4.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carlosramosa/google-search-scraper"
   }
 }
