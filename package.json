@@ -1,0 +1,24 @@
+{
+  "name": "google-scrapper",
+  "version": "1.0.0",
+  "description": "An awesome module to scrap any google search pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "google",
+    "scrapper",
+    "scrap",
+    "google-scrap"
+  ],
+  "author": "ramosar",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "decode-html": "^2.0.0",
+    "decode-uri-component": "^0.2.0",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
+  }
+}
