@@ -1,5 +1,5 @@
 {
-  "name": "google-search-scraper",
+  "name": "google-engine-search-scraper",
   "version": "1.0.3",
   "description": "An awesome module to scrap any google search pages",
   "main": "index.js",
